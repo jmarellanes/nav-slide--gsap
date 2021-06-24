@@ -1,0 +1,20 @@
+/* =====================================================================
+  -> MIXINS
+===================================================================== */
+@mixin fn_text-properties {
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* =====================================================================
+  -> FUNCTIONS
+===================================================================== */
+@function fn_calculate-rem($size) {
+  $rem-default: 16;
+  $rem-size: $size / $rem-default;
+  @return #{$rem-size}rem;
+}
+
+@function fn_calculate-lh($lh, $size) {
+  @return $lh / $size;
+}

@@ -1,0 +1,19 @@
+{
+  "name": "navigation-slide",
+  "version": "1.0.0",
+  "description": "Navigation slide animation with GSAP",
+  "main": "index.html",
+  "scripts": {
+    "start": "gulp"
+  },
+  "author": "José Manuel Díaz",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/register": "^7.14.5",
+    "browser-sync": "^2.26.5",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2"
+  }
+}

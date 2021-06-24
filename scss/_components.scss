@@ -1,0 +1,78 @@
+/* =====================================================================
+  -> BUTTON
+===================================================================== */
+.button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &__open-nav {
+    margin-top: var(--spacer-32);
+  }
+
+  &__primary {
+    height: 3rem;
+    width: 14rem;
+
+    color: #fff;
+    border: 2px solid var(--color-primary);
+
+    &-text {
+      vertical-align: text-top;
+    }
+  }
+
+  .lines {
+    stroke: #fff;
+  }
+}
+
+/* =====================================================================
+  -> NAV SOCIAL
+===================================================================== */
+.nav-social {
+  margin-top: auto;
+  margin-bottom: var(--spacer-32);
+
+  &__items {
+    list-style: none;
+    line-height: 0;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: var(--spacer-8);
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    padding: var(--spacer-4);
+  }
+}
+
+/* =====================================================================
+  -> BREADCRUMB
+===================================================================== */
+.breadcrumb {
+  list-style: none;
+  margin-left: var(--spacer-32);
+
+  &__item {
+    &:not(:first-child) {
+      &::before {
+        content: url(../images/icon__caret--right.svg);
+        margin-left: var(--spacer-8);
+        margin-right: var(--spacer-8);
+      }
+    }
+  }
+
+  &__link {
+    color: var(--color-primary);
+
+    &[aria-current='page'] {
+      color: #ffffff;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+:root {
+  /* =====================================================================
+  -> COLOR PALETTE
+===================================================================== */
+  --color-primary: #ff671f;
+
+  /* =====================================================================
+    -> MARGINS AND PADDINGS
+  ===================================================================== */
+  // Base 16
+  --spacer-4: 0.25rem;
+  --spacer-8: 0.5rem;
+  --spacer-16: 1rem;
+  --spacer-24: 1.5rem;
+  --spacer-32: 2rem;
+  --spacer-40: 2.5rem;
+  --spacer-48: 3rem;
+  --spacer-56: 3.5rem;
+  --spacer-64: 4rem;
+  --spacer-72: 4.5rem;
+  --spacer-80: 5rem;
+  --spacer-96: 6rem;
+  --spacer-112: 7rem;
+  --spacer-128: 8rem;
+  --spacer-160: 10rem;
+  --spacer-176: 11rem;
+  --spacer-192: 12rem;
+  --spacer-208: 13rem;
+  --spacer-256: 16rem;
+
+  /* =====================================================================
+    -> FONTS
+  ===================================================================== */
+  --font-primary: 'Libre Franklin', sans-serif;
+  --font-button: 'Barlow Semi Condensed', sans-serif;
+
+  /* =====================================================================
+    -> MIX CSS CUSTOM PROPERTIES
+  ===================================================================== */
+  --easing--xl: cubic-bezier(0.8, 0, 0.2, 1);
+  --easing--s: cubic-bezier(0.5, 0.7, 0.4, 1);
+
+  --topWrapperHeight: 4rem;
+  --headerDefaultWidth: 7rem;
+}

@@ -1,0 +1,136 @@
+/* =====================================================================
+  -> HEADER
+===================================================================== */
+.header {
+  height: 100%;
+  overflow: hidden;
+
+  &--default,
+  &--active {
+    background-color: var(--color-primary);
+  }
+
+  &--default {
+    height: inherit;
+    max-width: 7rem;
+
+    @media only screen and (max-width: 480px) {
+      max-width: 4rem;
+    }
+  }
+
+  &--active {
+    transform: translateX(-100%);
+    height: inherit;
+    padding-top: var(--topWrapperHeight);
+    padding-left: var(--headerDefaultWidth);
+    overflow: hidden;
+
+    @media only screen and (max-width: 480px) {
+      padding-top: 3rem;
+      padding-left: 3rem;
+    }
+
+    &::after {
+      content: url(../images/brandmark__full.svg);
+
+      position: absolute;
+      bottom: 0;
+      right: -4rem;
+
+      transform: rotate(-15deg);
+      width: 100%;
+      max-width: 352px;
+
+      @media only screen and (max-width: 480px) {
+        max-width: 232px;
+      }
+    }
+
+    > .brandmark {
+      margin-top: 0;
+      margin-bottom: var(--spacer-24);
+    }
+
+    .nav {
+      list-style: none;
+
+      &__link {
+        color: #ffff;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__brandmark {
+    margin-top: var(--spacer-32);
+  }
+}
+
+/* =====================================================================
+  -> BREADCRUMBS
+===================================================================== */
+.breadcrumbs {
+  background-color: #000;
+}
+
+/* =====================================================================
+  -> DETAILS
+===================================================================== */
+.details {
+  width: 100%;
+  max-height: 19.5rem;
+
+  padding: var(--spacer-32) var(--spacer-32) 0 var(--spacer-32);
+
+  background-color: #000;
+
+  @media only screen and (max-width: 980px) {
+    padding: var(--spacer-32) var(--spacer-32) var(--spacer-48) var(--spacer-32);
+    text-align: center;
+  }
+
+  &__title,
+  &__text {
+    margin-bottom: var(--spacer-24);
+    max-width: 32ch;
+
+    @media only screen and (max-width: 1279px) {
+      max-width: 50ch;
+    }
+  }
+
+  &__text {
+    @media only screen and (max-width: 980px) {
+      margin: 0 auto;
+      margin-bottom: var(--spacer-24);
+    }
+  }
+}
+
+/* =====================================================================
+  -> PRODUCT
+===================================================================== */
+.product {
+  overflow: hidden;
+
+  &__item {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__support-image {
+    &--vertical {
+      max-height: 24rem;
+
+      padding-left: var(--spacer-64);
+      text-align: right;
+
+      @media only screen and (max-width: 1279px) {
+        display: none;
+        visibility: hidden;
+      }
+    }
+  }
+}

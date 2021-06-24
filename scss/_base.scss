@@ -1,0 +1,33 @@
+/* =====================================================================
+  -> RESET
+===================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%; // 1rem = 16px
+  font-weight: normal;
+  height: 100%;
+} //--> html
+
+/* =====================================================================
+  -> GENERAL RULES
+===================================================================== */
+body {
+  color: #fff;
+  background-color: #000;
+  height: 100%;
+} // -> body
+
+[hidden] {
+  display: none !important;
+}

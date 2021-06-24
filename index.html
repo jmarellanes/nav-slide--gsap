@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500&family=Libre+Franklin:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preload" href="css/app.css" as="style" />
+    <link rel="stylesheet" href="css/app.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/CSSRulePlugin.min.js"
+      defer
+    ></script>
+    <script src="js/app.js" defer></script>
+
+    <title>Navigation Slide Animation</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <div class="header--default">
+            <div class="header__brandmark">
+              <!-- prettier-ignore -->
+              <svg width="40" height="32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-labelledby="logo-title" aria-describedby="logo-description" class="header__brandmark-item inline-svg">
+              <title id="logo-title">Harley Davidson logo</title>
+              <desc id="logo-description">White badge with only the outlines</desc>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M2.47 18.875h35.06v-5.458H2.47v5.458zm27.993 4.88S25.938 27.84 20 29.315c-5.938-1.475-10.46-5.56-10.46-5.56 1.347-.799 1.802-1.83 1.954-2.468h17.013c.153.639.606 1.67 1.956 2.468zM9.5 7.452s5.098.265 10.5-3.707c5.402 3.972 10.5 3.707 10.5 3.707-1.653 1.66-1.928 2.983-1.962 3.553H11.461c-.033-.57-.307-1.894-1.961-3.553zM40 11.005h-8.788c.052-1.38 1.856-2.04 1.856-2.04V5.409C23.255 4.88 20 0 20 0S16.745 4.88 6.932 5.41v3.555s1.804.66 1.856 2.04H0v10.282h8.759c-.501 1.773-2.997 2.222-2.997 2.222C12.912 30.829 20 32 20 32s7.09-1.172 14.237-8.491c0 0-2.496-.45-2.995-2.222H40V11.005z" fill="#fff"></path>
+            </svg>
+            </div>
+
+            <button
+              class="button button__open-nav"
+              aria-labelledby="button-open-navigation"
+              aria-expanded="false"
+            >
+              <span id="button-open-navigation" hidden="">Open Navigation</span>
+              <!-- prettier-ignore -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" viewBox="0 0 32 32" aria-hidden="true" focusable="false" class="button__open-nav-icon inline-svg">
+              <line class="top-line lines" x1="0" x2="32" y1="12" y2="12" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"></line>
+              <line class="middle-line lines" x1="0" x2="32" y1="18" y2="18" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"></line>
+              <line class="bottom-line lines" x1="0" x2="32" y1="24" y2="24" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"></line>
+            </svg>
+            </button>
+
+            <div class="nav-social" aria-labelledby="social-networks-menu">
+              <h2 id="social-networks-menu" hidden="">Social Networks Menu</h2>
+
+              <ul class="nav-social__items">
+                <li class="nav-social__item">
+                  <a
+                    href="#0"
+                    class="nav-social__link"
+                    target="_blank"
+                    rel="noopener"
+                    aria-labelledby="icon-facebook"
+                  >
+                    <span id="icon-facebook" hidden=""
+                      >Visit our Facebook page (opens in new tab)</span
+                    >
+                    <!-- prettier-ignore -->
+                    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="inline-svg">
+                    <path d="M12 21a9 9 0 100-18 9 9 0 000 18z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M15.75 8.25h-1.5A2.25 2.25 0 0012 10.5V21M9 13.5h6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                  </a>
+                </li>
+                <li class="nav-social__item">
+                  <a
+                    href="#0"
+                    class="nav-social__link"
+                    target="_blank"
+                    rel="noopener"
+                    aria-labelledby="icon-instagram"
+                  >
+                    <span id="icon-instagram" hidden=""
+                      >Visit our Instagram page (opens in new tab)</span
+                    >
+                    <!-- prettier-ignore -->
+                    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="inline-svg">
+                    <path d="M12 15.75a3.75 3.75 0 100-7.5 3.75 3.75 0 000 7.5z" stroke="#fff" stroke-width="2" stroke-miterlimit="10"></path>
+                    <path d="M16.125 3.375h-8.25a4.5 4.5 0 00-4.5 4.5v8.25a4.5 4.5 0 004.5 4.5h8.25a4.5 4.5 0 004.5-4.5v-8.25a4.5 4.5 0 00-4.5-4.5z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M16.875 8.25a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z" fill="#fff"></path>
+                  </svg>
+                  </a>
+                </li>
+                <li class="nav-social__item">
+                  <a
+                    href="#0"
+                    class="nav-social__link"
+                    target="_blank"
+                    rel="noopener"
+                    aria-labelledby="icon-twitter"
+                  >
+                    <span id="icon-twitter" hidden=""
+                      >Visit our Twitter page (opens in new tab)</span
+                    >
+                    <!-- prettier-ignore -->
+                    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="inline-svg">
+                    <path d="M21 6.86a10.357 10.357 0 01-2.601 2.588h0A10.38 10.38 0 013 18.155h0a10.325 10.325 0 005.677-1.795h0A10.394 10.394 0 014.513 5h0a10.376 10.376 0 007.474 4.652h0a3.244 3.244 0 016.002-2.254h0A10.43 10.43 0 0021 6.859" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="header--active" hidden="">
+            <div class="header__brandmark brandmark">
+              <!-- prettier-ignore -->
+              <svg width="40" height="32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-labelledby="logo-title" aria-describedby="logo-description" class="header__brandmark-item inline-svg">
+              <title id="logo-title">Harley Davidson logo</title>
+              <desc id="logo-description">White badge with only the outlines</desc>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M2.47 18.875h35.06v-5.458H2.47v5.458zm27.993 4.88S25.938 27.84 20 29.315c-5.938-1.475-10.46-5.56-10.46-5.56 1.347-.799 1.802-1.83 1.954-2.468h17.013c.153.639.606 1.67 1.956 2.468zM9.5 7.452s5.098.265 10.5-3.707c5.402 3.972 10.5 3.707 10.5 3.707-1.653 1.66-1.928 2.983-1.962 3.553H11.461c-.033-.57-.307-1.894-1.961-3.553zM40 11.005h-8.788c.052-1.38 1.856-2.04 1.856-2.04V5.409C23.255 4.88 20 0 20 0S16.745 4.88 6.932 5.41v3.555s1.804.66 1.856 2.04H0v10.282h8.759c-.501 1.773-2.997 2.222-2.997 2.222C12.912 30.829 20 32 20 32s7.09-1.172 14.237-8.491c0 0-2.496-.45-2.995-2.222H40V11.005z" fill="#fff"></path>
+            </svg>
+            </div>
+
+            <button
+              class="button button__close-nav"
+              aria-labelledby="button-close-navigation"
+            >
+              <span id="button-close-navigation" hidden=""
+                >Close Navigation</span
+              >
+              <!-- prettier-ignore -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" aria-hidden="true" focusable="false" class="button__close-nav-icon inline-svg">
+              <line class="top-line lines" x1="12" x2="44" y1="28" y2="28" transform="rotate(45 28 28)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"></line>
+              <line class="bottom-line lines" x1="12" x2="44" y1="28" y2="28" transform="rotate(-45 28 28)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"></line>
+            </svg>
+            </button>
+
+            <nav class="navbar" aria-labelledby="main-menu">
+              <h2 id="main-menu" hidden="">Main Menu</h2>
+
+              <ul class="nav navbar__nav">
+                <li class="nav__item">
+                  <a class="nav__link" href="#0">Bikes</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#0">Parts</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#0">Mens</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#0">Womens</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#0">Goods &amp; Gifts</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#0">Experience H-D</a>
+                </li>
+              </ul>
+            </nav>
+
+            <div class="nav-social" aria-labelledby="social-networks-menu">
+              <h2 id="social-networks-menu" hidden="">Social Networks Menu</h2>
+
+              <ul class="nav-social__items">
+                <li class="nav-social__item">
+                  <a
+                    href="#0"
+                    class="nav-social__link"
+                    target="_blank"
+                    rel="noopener"
+                    aria-labelledby="icon-facebook"
+                  >
+                    <span id="icon-facebook" hidden=""
+                      >Visit our Facebook page (opens in new tab)</span
+                    >
+                    <!-- prettier-ignore -->
+                    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="inline-svg">
+                    <path d="M12 21a9 9 0 100-18 9 9 0 000 18z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M15.75 8.25h-1.5A2.25 2.25 0 0012 10.5V21M9 13.5h6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                  </a>
+                </li>
+                <li class="nav-social__item">
+                  <a
+                    href="#0"
+                    class="nav-social__link"
+                    target="_blank"
+                    rel="noopener"
+                    aria-labelledby="icon-instagram"
+                  >
+                    <span id="icon-instagram" hidden=""
+                      >Visit our Instagram page (opens in new tab)</span
+                    >
+                    <!-- prettier-ignore -->
+                    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="inline-svg">
+                    <path d="M12 15.75a3.75 3.75 0 100-7.5 3.75 3.75 0 000 7.5z" stroke="#fff" stroke-width="2" stroke-miterlimit="10"></path>
+                    <path d="M16.125 3.375h-8.25a4.5 4.5 0 00-4.5 4.5v8.25a4.5 4.5 0 004.5 4.5h8.25a4.5 4.5 0 004.5-4.5v-8.25a4.5 4.5 0 00-4.5-4.5z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M16.875 8.25a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z" fill="#fff"></path>
+                  </svg>
+                  </a>
+                </li>
+                <li class="nav-social__item">
+                  <a
+                    href="#0"
+                    class="nav-social__link"
+                    target="_blank"
+                    rel="noopener"
+                    aria-labelledby="icon-twitter"
+                  >
+                    <span id="icon-twitter" hidden=""
+                      >Visit our Twitter page (opens in new tab)</span
+                    >
+                    <!-- prettier-ignore -->
+                    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="inline-svg">
+                    <path d="M21 6.86a10.357 10.357 0 01-2.601 2.588h0A10.38 10.38 0 013 18.155h0a10.325 10.325 0 005.677-1.795h0A10.394 10.394 0 014.513 5h0a10.376 10.376 0 007.474 4.652h0a3.244 3.244 0 016.002-2.254h0A10.43 10.43 0 0021 6.859" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <figure class="product product__main-image">
+        <img
+          src="images/product__main.webp"
+          class="product__item"
+          alt="Motorcycle image"
+        />
+      </figure>
+
+      <!-- Removed /li to avoid space between icon__caret-right and element -->
+      <div class="breadcrumbs">
+        <!-- prettier-ignore -->
+        <nav aria-label="breadcrumbs">
+          <ol class="breadcrumb">
+            <li class="breadcrumb__item"><a class="breadcrumb__link" href="#0">Motorcycles</a>
+            </li><li class="breadcrumb__item"><a class="breadcrumb__link" href="#0" aria-current="page">Electric</a>
+          </li></ol>
+        </nav>
+      </div>
+
+      <article class="details">
+        <h1 class="details__title">LiveWire</h1>
+        <p class="details__text">
+          <span class="details__bold">A new way to ride. </span>Get instant
+          power and acceleration with just a twist of the throttle.
+        </p>
+
+        <button
+          class="button button__primary"
+          aria-describedby="button-motorcycle-details"
+        >
+          <span class="button__primary-text">Details</span>
+        </button>
+        <span id="button-motorcycle-details" hidden="">Open Details Page</span>
+      </article>
+
+      <aside class="product product__support-image--horizontal">
+        <img
+          src="images/product__support--horizontal.webp"
+          class="product__item"
+          alt="null"
+        />
+      </aside>
+
+      <aside class="product product__support-image--vertical">
+        <img
+          src="images/product__support--vertical.webp"
+          class="product__item"
+          alt="null"
+        />
+      </aside>
+    </div>
+
+    <!-- Preloading background-images to prevent a flash on initial loading -->
+    <div class="preload" hidden="">
+      <img src="images/brandmark__full.svg" alt="null" />
+    </div>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+/* =====================================================================
+  -> GENERAL
+===================================================================== */
+body {
+  font-family: var(--font-primary);
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: fn_calculate-lh(24, 16);
+}
+
+/* =====================================================================
+  -> HEADINGS
+===================================================================== */
+h1 {
+  @include fn_text-properties;
+
+  font-size: fn_calculate-rem(48);
+  // font-size: 7.7vw;
+  font-weight: 700;
+  line-height: fn_calculate-lh(56, 48);
+}
+
+/* =====================================================================
+  -> PARTIALS
+===================================================================== */
+.navbar {
+  @include fn_text-properties;
+
+  font-family: var(--font-button);
+  font-size: fn_calculate-rem(28);
+  line-height: fn_calculate-lh(56, 28);
+  text-transform: uppercase;
+}
+
+.breadcrumb {
+  @include fn_text-properties;
+
+  font-family: var(--font-button);
+  font-size: fn_calculate-rem(18);
+  font-weight: 500;
+
+  &__item {
+    &:first-child {
+      text-transform: uppercase;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+}
+
+.details {
+  &__bold {
+    font-weight: 700;
+  }
+}
+
+/* =====================================================================
+  -> COMPONENTS
+===================================================================== */
+.button {
+  @include fn_text-properties;
+
+  font-family: var(--font-button);
+  font-size: fn_calculate-rem(18);
+  line-height: fn_calculate-lh(18, 18);
+
+  font-weight: 500;
+  text-transform: uppercase;
+}
